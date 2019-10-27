@@ -41,6 +41,7 @@ func VerifyPrecertSCT(sct *ct.SignedCertificateTimestamp, precert ct.PreCert, ve
 				Extensions: sct.Extensions,
 			},
 		},
+
 	}
 	return verify.VerifySCTSignature(*sct, entry)
 }
